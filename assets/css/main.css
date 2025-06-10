@@ -2192,10 +2192,11 @@ input, select, textarea {
 			margin: 4em 0 0 0;
 		}
 
-		/* On smaller screens (phones), adjust to fit full width */
+		/* On small screens (phones), use a different image */
 		@media screen and (max-width: 768px) {
 			#banner {
-				background-size: 100% auto; /* Show full image width */
+				background-image: url("../../images/pic01_mobile.png");
+				background-size: 100% auto; /* Fit full width */
 			}
 		}
 
