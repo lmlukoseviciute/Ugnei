@@ -2195,7 +2195,7 @@ input, select, textarea {
 		/* On small screens (phones), use a different image */
 		@media screen and (max-width: 768px) {
 			#banner {
-				background-image: url("../../images/pic01_mobile.png");
+				background-image: url("../../images/pic01_phone.jpg");
 				background-size: 100% auto; /* Fit full width */
 			}
 		}
