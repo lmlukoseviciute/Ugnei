@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Draugai Dr Ugnei</title>
+		<title>Dopetrope by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -32,24 +32,24 @@
 							<div class="row">
 								<div class="col-4 col-12-medium">
 									<section class="first">
-										<div class="countdown" data-date="2025-09-12T00:00:00"></div>
+										<div class="countdown" data-date="2025-09-25T00:00:00"></div>
 										<header>
 											<p> </p>
 											<p> </p>
 											<h2>MATU</h2>
 										</header>
-										<p>Mes susitiksime Rugsėjo 12, 2025.</p>
+										<p>Mes susitiksime Rugsėjo 25, 2025.</p>
 									</section>
 								</div>
 								<div class="col-4 col-12-medium">
 									<section class="middle">
-										<div class="countdown" data-date="2025-09-30T00:00:00"></div>
+										<div class="countdown" data-date="2025-10-02T00:00:00"></div>
 										<header>
 											<p> </p>
 											<p> </p>
 											<h2>LAURYNU ir LAIMA</h2>
 										</header>
-										<p>Mes susitiksimee Rugsėjo 30, 2025.</p>
+										<p>Mes susitiksime Spalio 2, 2025.</p>
 									</section>
 								</div>
 								<div class="col-4 col-12-medium">
@@ -60,7 +60,7 @@
 											<p> </p>
 											<h2>ELENA ir VILIUM</h2>
 										</header>
-										<p>Mes susitiksime TUOJ</p>
+										<p>Mes susitiksim TUOJ</p>
 										<p> </p>
 										<p> </p>
 									</section>
@@ -103,6 +103,14 @@
 					const now = new Date().getTime();
 
 					countdowns.forEach(cd => {
+						const parentSection = cd.closest('section');
+						
+						// If this countdown is inside the last section, show "SOON" instead of countdown
+						if (parentSection && parentSection.classList.contains('last')) {
+							cd.textContent = "SOON";
+							return; // Skip the countdown calculation
+						}
+
 						const targetDate = new Date(cd.getAttribute('data-date')).getTime();
 						let distance = targetDate - now;
 
