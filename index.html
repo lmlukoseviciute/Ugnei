@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Dopetrope by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+
+					
+
+					<!-- Banner -->
+						<section id="banner">
+							<header>
+								<h2>Kiek laiko liko iki susitikimo su draugais?</h2>
+								<p>Mes paskaičiavome ...</p>
+							</header>
+						</section>
+
+					<!-- Intro -->
+						<section id="intro" class="container">
+							<div class="row">
+								<div class="col-4 col-12-medium">
+									<section class="first">
+										<div class="countdown" data-date="2026-01-01T00:00:00"></div>
+										<header>
+											<p> </p>
+											<p> </p>
+											<h2>MATU</h2>
+										</header>
+										<p>Mes susitiksim 1st, 2026.</p>
+									</section>
+								</div>
+								<div class="col-4 col-12-medium">
+									<section class="middle">
+										<div class="countdown" data-date="2025-12-15T00:00:00"></div>
+										<header>
+											<p> </p>
+											<p> </p>
+											<h2>LAURYNU ir LAIMA</h2>
+										</header>
+										<p>Mes susitiksim December 15th, 2025.</p>
+									</section>
+								</div>
+								<div class="col-4 col-12-medium">
+									<section class="last">
+										<div class="countdown" data-date="2025-10-10T00:00:00"></div>
+										<header>
+											<p> </p>
+											<p> </p>
+											<h2>ELENA ir VILIUM</h2>
+										</header>
+										<p>Mes susitiksim TUOJ</p>
+									</section>
+								</div>
+							</div>
+						</section>
+						<section class="container">
+							<div class="row">
+								<div class="col-6 col-12-medium">
+									<!-- Image on the left -->
+									<img src="images/photo.jpg" alt="Descriptive Alt Text" style="width: 100%; border-radius: 8px;">
+								</div>
+								<div class="col-6 col-12-medium" style="display: flex; align-items: center;">
+									<!-- Quote on the right -->
+									<blockquote style="font-size: 1.4em; font-style: italic; line-height: 1.6; color: #444;">
+										“Ugne, mes su tavim!”
+										<footer style="margin-top: 1em; font-size: 1em; font-weight: bold;">— Draugai</footer>
+									</blockquote>
+								</div>
+							</div>
+						</section>
+
+
+
+
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				function updateCountdowns() {
+					const countdowns = document.querySelectorAll('.countdown');
+					const now = new Date().getTime();
+
+					countdowns.forEach(cd => {
+						const targetDate = new Date(cd.getAttribute('data-date')).getTime();
+						let distance = targetDate - now;
+
+						if (distance < 0) {
+							cd.innerHTML = "Expired";
+							return;
+						}
+
+						const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+						const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+						const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+						const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+						cd.innerHTML = `${days}d ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+					});
+				}
+
+				// Update every second
+				setInterval(updateCountdowns, 1000);
+				updateCountdowns();
+			</script>
+
+	</body>
+</html>
