@@ -54,13 +54,13 @@
 								</div>
 								<div class="col-4 col-12-medium">
 									<section class="last">
-										<div class="countdown" data-date="2025-10-10T00:00:00"></div>
+										<div class="countdown" data-date="2025-09-23T00:00:00"></div>
 										<header>
 											<p> </p>
 											<p> </p>
 											<h2>ELENA ir VILIUM</h2>
 										</header>
-										<p>Mes susitiksim TUOJ</p>
+										<p>Mes susitiksim Rugsėjo 23, 2025</p>
 										<p> </p>
 										<p> </p>
 									</section>
@@ -106,10 +106,10 @@
 						const parentSection = cd.closest('section');
 						
 						// If this countdown is inside the last section, show "SOON" instead of countdown
-						if (parentSection && parentSection.classList.contains('last')) {
-							cd.textContent = "SOON";
-							return; // Skip the countdown calculation
-						}
+						//if (parentSection && parentSection.classList.contains('last')) {
+						//	cd.textContent = "SOON";
+						//	return; // Skip the countdown calculation
+						//}
 
 						const targetDate = new Date(cd.getAttribute('data-date')).getTime();
 						let distance = targetDate - now;
