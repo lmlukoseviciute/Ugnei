@@ -13,12 +13,8 @@
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
-
 			<!-- Header -->
 				<section id="header">
-
-					
-
 					<!-- Banner -->
 						<section id="banner">
 							<header>
@@ -26,7 +22,6 @@
 								<p>Mes paskaičiavome ...</p>
 							</header>
 						</section>
-
 					<!-- Intro -->
 						<section id="intro" class="container">
 							<div class="row">
@@ -83,9 +78,6 @@
 							</div>
 						</section>
 
-
-
-
 				</section>
 
 		</div>
@@ -105,12 +97,6 @@
 					countdowns.forEach(cd => {
 						const parentSection = cd.closest('section');
 						
-						// If this countdown is inside the last section, show "SOON" instead of countdown
-						//if (parentSection && parentSection.classList.contains('last')) {
-						//	cd.textContent = "SOON";
-						//	return; // Skip the countdown calculation
-						//}
-
 						const targetDate = new Date(cd.getAttribute('data-date')).getTime();
 						let distance = targetDate - now;
 
